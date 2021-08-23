@@ -9,7 +9,7 @@ export interface MailJobData {
 
 const MailQueue = new Queue('mail', {
   limiter: {
-    max: 90,
+    max: 10,
     duration: 1000,
   },
   redis: redisConfig,

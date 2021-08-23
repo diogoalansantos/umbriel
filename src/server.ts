@@ -4,7 +4,8 @@ import mongoose from 'mongoose';
 import app from './app';
 
 mongoose.connect(
-  `mongodb://${mongoConfig.username}:${mongoConfig.password}@${mongoConfig.host}:${mongoConfig.port}/${mongoConfig.database}`,
+  // `mongodb://${mongoConfig.username}:${mongoConfig.password}@${mongoConfig.host}:${mongoConfig.port}/${mongoConfig.database}`,
+  `mongodb://${mongoConfig.host}:${mongoConfig.port}/${mongoConfig.database}`,
   {
     useNewUrlParser: true,
     useUnifiedTopology: false,

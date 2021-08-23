@@ -6,7 +6,7 @@ describe('Send Message to Recipient', () => {
   it('should send message to the recipient', async () => {
     const SendMessageToRecipient = new SendMessageToRecipientService();
 
-    SendMessageToRecipient.run('diego@rocketseat.com.br', {
+    SendMessageToRecipient.run('oi@heyliberdade.com.br', {
       subject: 'Hello World',
       body: 'Just testing',
     });

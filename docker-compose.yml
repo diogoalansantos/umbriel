@@ -48,10 +48,10 @@ services:
     container_name: umbriel-mongo
     restart: always
     environment:
-      - ALLOW_EMPTY_PASSWORD=no
-      - MONGODB_USERNAME=${MONGO_USER}
-      - MONGODB_PASSWORD=${MONGO_PASS}
-      - MONGODB_DATABASE=${MONGO_DB}
+      - ALLOW_EMPTY_PASSWORD=yes
+      # - MONGODB_USERNAME=${MONGO_USER}
+      # - MONGODB_PASSWORD=${MONGO_PASS}
+      # - MONGODB_DATABASE=${MONGO_DB}
     ports:
       - "27017:27017"
     volumes:
@@ -64,8 +64,8 @@ services:
     container_name: umbriel-redis
     restart: always
     environment:
-      - ALLOW_EMPTY_PASSWORD=no
-      - REDIS_PASSWORD=${REDIS_PASS}
+      - ALLOW_EMPTY_PASSWORD=yes
+      # - REDIS_PASSWORD=${REDIS_PASS}
     volumes:
       - /tmp/redis:/bitnami/redis/data
     networks:
